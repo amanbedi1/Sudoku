@@ -107,7 +107,7 @@ function Solve(grid) { //function to Solve sudoku
 
 var x = 0;
 
-function Timer() { //function to start timer and updating score as well 
+function StartTimer() {
 
 
     let StartTime = new Date().getTime();
@@ -136,13 +136,13 @@ function Timer() { //function to start timer and updating score as well
     return;
 }
 
-function StopTimer() { //function to end timer and updating score as well 
+function StopTimer() {
 
     clearInterval(x);
     x = 0;
     time.innerHTML = "00:00";
 }
-//Timer start and end function ends here  
+
 
 
 function Fill() {
@@ -318,13 +318,13 @@ NewGame.addEventListener("click", () => {
     Solve(Puzzle);
     StopTimer();
     Fill();
-    Timer();
+    StartTimer();
 
 });
 
 Restart.addEventListener("click", () => {
     StopTimer();
-    Timer();
+    StartTimer();
     Print(Temp);
 });
 
