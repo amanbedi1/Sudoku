@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="SudokuStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <span class="heading-1">Sudoku</span>
+        <img src="Sudoku-Logo.png" class="logo">
+        <a href="#"><img src="Github-Logo.png" class="logo2"></a>
+
+    </header>
+
+    <main>
+        <div id="game-options">
+            <img src="clock-Logo.png" class="clock">
+            <span id="time">00:00</span>
+            <span id="validation">Validate
+            <label class="switch">
+                <input type="checkbox" id="validate">
+                <span class="slider round"></span>
+            </label>
+            </span>
+        </div>
+
+        <div id="sudoku-table">
+            <table id="game-table ">
+                <tr>
+                    <td> <input type="number" autocomplete="off" id="cell-0"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-1"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-2"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-3"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-4"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-5"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-6"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-7"></td>
+                    <td> <input type="number" autocomplete="off" id="cell-8"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-9"></td>
+                    <td><input type="number" autocomplete="off" id="cell-10"></td>
+                    <td><input type="number" autocomplete="off" id="cell-11"></td>
+                    <td><input type="number" autocomplete="off" id="cell-12"></td>
+                    <td><input type="number" autocomplete="off" id="cell-13"></td>
+                    <td><input type="number" autocomplete="off" id="cell-14"></td>
+                    <td><input type="number" autocomplete="off" id="cell-15"></td>
+                    <td><input type="number" autocomplete="off" id="cell-16"></td>
+                    <td><input type="number" autocomplete="off" id="cell-17"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-18"></td>
+                    <td><input type="number" autocomplete="off" id="cell-19"></td>
+                    <td><input type="number" autocomplete="off" id="cell-20"></td>
+                    <td><input type="number" autocomplete="off" id="cell-21"></td>
+                    <td><input type="number" autocomplete="off" id="cell-22"></td>
+                    <td><input type="number" autocomplete="off" id="cell-23"></td>
+                    <td><input type="number" autocomplete="off" id="cell-24"></td>
+                    <td><input type="number" autocomplete="off" id="cell-25"></td>
+                    <td><input type="number" autocomplete="off" id="cell-26"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-27"></td>
+                    <td><input type="number" autocomplete="off" id="cell-28"></td>
+                    <td><input type="number" autocomplete="off" id="cell-29"></td>
+                    <td><input type="number" autocomplete="off" id="cell-30"></td>
+                    <td><input type="number" autocomplete="off" id="cell-31"></td>
+                    <td><input type="number" autocomplete="off" id="cell-32"></td>
+                    <td><input type="number" autocomplete="off" id="cell-33"></td>
+                    <td><input type="number" autocomplete="off" id="cell-34"></td>
+                    <td><input type="number" autocomplete="off" id="cell-35"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-36"></td>
+                    <td><input type="number" autocomplete="off" id="cell-37"></td>
+                    <td><input type="number" autocomplete="off" id="cell-38"></td>
+                    <td><input type="number" autocomplete="off" id="cell-39"></td>
+                    <td><input type="number" autocomplete="off" id="cell-40"></td>
+                    <td><input type="number" autocomplete="off" id="cell-41"></td>
+                    <td><input type="number" autocomplete="off" id="cell-42"></td>
+                    <td><input type="number" autocomplete="off" id="cell-43"></td>
+                    <td><input type="number" autocomplete="off" id="cell-44"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-45"></td>
+                    <td><input type="number" autocomplete="off" id="cell-46"></td>
+                    <td><input type="number" autocomplete="off" id="cell-47"></td>
+                    <td><input type="number" autocomplete="off" id="cell-48"></td>
+                    <td><input type="number" autocomplete="off" id="cell-49"></td>
+                    <td><input type="number" autocomplete="off" id="cell-50"></td>
+                    <td><input type="number" autocomplete="off" id="cell-51"></td>
+                    <td><input type="number" autocomplete="off" id="cell-52"></td>
+                    <td><input type="number" autocomplete="off" id="cell-53"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-54"></td>
+                    <td><input type="number" autocomplete="off" id="cell-55"></td>
+                    <td><input type="number" autocomplete="off" id="cell-56"></td>
+                    <td><input type="number" autocomplete="off" id="cell-57"></td>
+                    <td><input type="number" autocomplete="off" id="cell-58"></td>
+                    <td><input type="number" autocomplete="off" id="cell-59"></td>
+                    <td><input type="number" autocomplete="off" id="cell-60"></td>
+                    <td><input type="number" autocomplete="off" id="cell-61"></td>
+                    <td><input type="number" autocomplete="off" id="cell-62"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-63"></td>
+                    <td><input type="number" autocomplete="off" id="cell-64"></td>
+                    <td><input type="number" autocomplete="off" id="cell-65"></td>
+                    <td><input type="number" autocomplete="off" id="cell-66"></td>
+                    <td><input type="number" autocomplete="off" id="cell-67"></td>
+                    <td><input type="number" autocomplete="off" id="cell-68"></td>
+                    <td><input type="number" autocomplete="off" id="cell-69"></td>
+                    <td><input type="number" autocomplete="off" id="cell-70"></td>
+                    <td><input type="number" autocomplete="off" id="cell-71"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" autocomplete="off" id="cell-72"></td>
+                    <td><input type="number" autocomplete="off" id="cell-73"></td>
+                    <td><input type="number" autocomplete="off" id="cell-74"></td>
+                    <td><input type="number" autocomplete="off" id="cell-75"></td>
+                    <td><input type="number" autocomplete="off" id="cell-76"></td>
+                    <td><input type="number" autocomplete="off" id="cell-77"></td>
+                    <td><input type="number" autocomplete="off" id="cell-78"></td>
+                    <td><input type="number" autocomplete="off" id="cell-79"></td>
+                    <td><input type="number" autocomplete="off" id="cell-80"></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="buttons">
+            <button class="btn" id="newgame">NewGame</button>
+            <button class="btn" id="restart">Restart</button>
+            <button class="btn" id="solve">Solve</button>
+            <button class="btn" id="hint">Hint</button>
+        </div>
+    </main>
+
+    <script src="SudokuApp.js"></script>
+</body>
+
+</html>

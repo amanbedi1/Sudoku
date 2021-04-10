@@ -1,0 +1,265 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 255, 255, 1);
+    color: #eaeff1;
+    font-size: 30px;
+}
+
+header {
+    background-color: rgb(255, 255, 255, 1);
+    font-size: 50px;
+    color: #3e5979;
+    border-bottom: 4px solid #e6ecf3;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.logo {
+    height: 86px;
+    width: 91px;
+    position: absolute;
+    margin-left: -23px;
+    margin-top: -5px;
+}
+
+.logo2 {
+    height: 60px;
+    width: 60px;
+    float: right;
+    margin: 5px 4px 0px 0px;
+}
+
+main {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+    width: 515px;
+    font-size: 30px;
+}
+
+#time {
+    width: 200px;
+    margin-right: 71px;
+    color: #3e5979;
+}
+
+.clock {
+    margin-top: 5px;
+    height: 35px;
+    width: 35px;
+}
+
+#validation {
+    width: fit-content;
+    color: #3e5979;
+}
+
+.switch {
+    margin: 0px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: 5px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ebe6e6;
+    -webkit-transition: .6s;
+    transition: .6s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #9ecdfa;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #9ecdfa;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+table,
+tr {
+    border: 1px solid #ced2da;
+    border-collapse: collapse;
+}
+
+input[type="number"] {
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    outline: none;
+    font-size: 35px;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 1);
+    border: 1px solid #ced2da;
+    border-collapse: collapse;
+    transition-duration: .5s;
+}
+
+input:hover {
+    background-color: #c4dff8;
+}
+
+input:disabled {
+    color: #344861;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+td:first-child {
+    border-left: solid #344861;
+}
+
+td:nth-child(3n) {
+    border-right: solid #344861;
+}
+
+tr:first-child {
+    border-top: solid #344861;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: solid #344861;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 5px;
+}
+
+.btn {
+    margin: 5px 10px;
+    padding: 23px 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+    background-color: #4a90e2;
+    color: whitesmoke;
+    border: 1px solid #CCD9E0;
+}
+
+.btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:862px) {
+    body {
+        width: fit-content;
+        zoom: 100%;
+    }
+    header {
+        font-size: 60px;
+    }
+    .heading-1 {
+        margin-left: -5px;
+    }
+    .logo {
+        height: 90px;
+        width: 90px;
+        margin-left: -20px;
+        margin-top: 1px;
+    }
+    .logo2 {
+        margin: 11px 10px 0px 0px;
+    }
+    main {
+        flex-direction: column;
+    }
+    #game-options {
+        width: 90%;
+        font-size: 33px;
+    }
+    .clock {
+        margin-top: 8px;
+    }
+    #time {
+        margin-right: 31%;
+    }
+    .switch {
+        top: 8px;
+    }
+    #sudoku-table {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    table {
+        margin: auto;
+    }
+    input[type="number"] {
+        height: 67px;
+        width: 67px;
+    }
+    .buttons {
+        flex-direction: row;
+        align-self: center;
+        margin-top: 40px;
+    }
+    button {
+        padding: 25px 35px;
+        width: 163px;
+        height: 93px;
+        font-size: 20px;
+    }
+}
