@@ -183,6 +183,7 @@ function GeneratePuzzle(grid) {
     }
 
     for (let i = 0; i < 10; ++i) {
+
         let r1 = Math.floor(Math.random() * 3);
         let c1 = Math.floor(Math.random() * 3);
         let r2 = Math.floor(Math.random() * 3);
@@ -212,9 +213,10 @@ function Validate(row, col) {
 
     Board[row][col].style.color = "#28394d";
 
-    if (Board[row][col].value.length > 1)
+    if (Board[row][col].value.length > 1) {
 
         Board[row][col].value = "";
+    }
 
     if (Board[row][col].value != Puzzle[row][col] && Board[row][col].value != "" && DoValidation.checked) {
 
@@ -238,8 +240,9 @@ function GiveCordinates(id) {
 
     if (id.length > 6) {
         Temp_ = (id[5] - '0') * 10 + (id[6] - '0');
-    } else
+    } else {
         Temp_ = id[5] - '0';
+    }
 
     let row = Math.floor(Temp_ / 9);
     let col = Math.floor(Temp_ % 9);
@@ -304,11 +307,8 @@ function IsSolved() {
 for (let row = 0; row < 9; ++row) {
     for (let col = 0; col < 9; ++col) {
         Board[row][col].addEventListener("keyup", (e) => {
-
             let dimension = GiveCordinates(e.target.getAttribute('id') + "");
             Validate(dimension[0], dimension[1]);
-
-
         });
     }
 }
