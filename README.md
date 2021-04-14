@@ -1,5 +1,7 @@
 # Sudoku 
-A Sudoku Web Application made by using HTML CSS and JavaScript 
+A Sudoku Web Application made by using HTML CSS and JavaScript.  
+   
+For **Live Demo** click [here](https://sud-oku.herokuapp.com/)
 ## Features 
 1. Responsive Web Application. 
 2. Optimised for low end devices. 
